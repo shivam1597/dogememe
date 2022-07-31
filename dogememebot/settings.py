@@ -67,7 +67,7 @@ USER_IDS = [
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'dogememebot.pipelines.dogememebotPipeline': 300,
+   'dogememebot.pipelines.DogememebotPipeline': 300,
 }
 
 FEED_EXPORTERS = {'csv': 'dogememe.exporter.Exporter'}

@@ -1,7 +1,6 @@
 import scrapy
 from scrapy.http import Request
 from ..items import DogememebotItem
-import time
 
 class UserNameSpider(scrapy.Spider):
     name = "spider"
