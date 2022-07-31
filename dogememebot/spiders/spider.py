@@ -2,8 +2,6 @@ import scrapy
 from scrapy.http import Request
 from ..items import DogememebotItem
 import time
-from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
 
 class UserNameSpider(scrapy.Spider):
     name = "spider"
