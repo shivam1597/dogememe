@@ -77,9 +77,9 @@ class UserNameSpider(scrapy.Spider):
                     if not is_video:
                         item['image_url'] = edge['node']['display_url']
                         item['shortcode'] = edge['node']['shortcode']
-                        caption_edge = edge['node']['edge_media_to_caption']
+                        caption_edge = edge['node']['edge_media_to_caption']['edges']
                         if caption_edge:
-                            caption = caption_edge['edges'][0]['node']['text'].replace('\n', '')
+                            caption = caption_edge[0]['node']['text'].replace('\n', '')
                             caption_partition = caption.partition('#')
                             hashtags = '#{}'.format(caption_partition[2])
                             item['hashtags'] = hashtags
