@@ -10,7 +10,7 @@ def send_request():
         "spider": "spider"
     })
 
-@sched.scheduled_job('cron', day_of_week='mon-sun', hour=11, minute=10)
+@sched.scheduled_job('cron', day_of_week='mon-sun', hour=18, minute=50)
 def scheduled_job():
     subprocess.run("scrapyd-deploy", shell=True, universal_newlines=True)
     send_request()
